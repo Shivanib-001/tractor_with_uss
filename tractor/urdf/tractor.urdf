@@ -1,0 +1,526 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="tractor">
+  
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.17142 0.086225 0.0015789"
+        rpy="0 0 0" />
+      <mass
+        value="2890" />
+      <inertia
+        ixx="1225"
+        ixy="166.96"
+        ixz="-1.1891"
+        iyy="5357.7"
+        iyz="-1.5076"
+        izz="4831" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tractor/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0.94902 0.9098 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tractor/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="Front_L">
+    <inertial>
+      <origin
+        xyz="0.17142 0.086225 0.0015789"
+        rpy="0 0 0" />
+      <mass
+        value="100" />
+      <inertia
+        ixx="1225"
+        ixy="166.96"
+        ixz="-1.1891"
+        iyy="5357.7"
+        iyz="-1.5076"
+        izz="4831" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tractor/meshes/Front_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tractor/meshes/Front_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Front1"
+    type="continuous">
+    <origin
+      xyz="1.6143 -0.81922 -0.13999"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Front_L" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Front_R">
+    <inertial>
+      <origin
+        xyz="0.17142 0.086225 0.0015789"
+        rpy="0 0 0" />
+      <mass
+        value="100" />
+      <inertia
+        ixx="1225"
+        ixy="166.96"
+        ixz="-1.1891"
+        iyy="5357.7"
+        iyz="-1.5076"
+        izz="4831" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tractor/meshes/Front_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tractor/meshes/Front_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Front2"
+    type="continuous">
+    <origin
+      xyz="1.6143 0.81922 -0.13999"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Front_R" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Rear_L">
+    <inertial>
+      <origin
+        xyz="0.17142 0.086225 0.0015789"
+        rpy="0 0 0" />
+      <mass
+        value="100" />
+      <inertia
+        ixx="1225"
+        ixy="166.96"
+        ixz="-1.1891"
+        iyy="5357.7"
+        iyz="-1.5076"
+        izz="4831" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tractor/meshes/Rear_L.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tractor/meshes/Rear_L.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Rear1"
+    type="continuous">
+    <origin
+      xyz="-0.65 -0.77 0.055"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Rear_L" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="Rear_R">
+    <inertial>
+      <origin
+        xyz="0.17142 0.086225 0.0015789"
+        rpy="0 0 0" />
+      <mass
+        value="100" />
+      <inertia
+        ixx="1225"
+        ixy="166.96"
+        ixz="-1.1891"
+        iyy="5357.7"
+        iyz="-1.5076"
+        izz="4831" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tractor/meshes/Rear_R.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tractor/meshes/Rear_R.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Rear2"
+    type="continuous">
+    <origin
+      xyz="-0.65 0.77 0.055"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="Rear_R" />
+    <axis
+      xyz="0 1 0" />
+  </joint>
+  <link
+    name="IMPLEMENT">
+    <inertial>
+      <origin
+        xyz="0.17142 0.086225 0.0015789"
+        rpy="0 0 0" />
+      <mass
+        value="220" />
+      <inertia
+        ixx="1225"
+        ixy="166.96"
+        ixz="-1.1891"
+        iyy="5357.7"
+        iyz="-1.5076"
+        izz="4831" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tractor/meshes/IMPLEMENT.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://tractor/meshes/IMPLEMENT.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="implement"
+    type="revolute">
+    <origin
+      xyz="-0.985 0.0072479 0.245"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="IMPLEMENT" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0.95"
+      upper="1"
+      effort="1"
+      velocity="1" />
+  </joint>
+
+  <gazebo reference="base_link">
+    <material>Gazebo/Blue</material>
+  </gazebo>
+  
+  <gazebo reference="Front_L">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  
+  <gazebo reference="Front_R">
+    <material>Gazebo/Black</material>
+  </gazebo>
+
+  <gazebo reference="Rear_R">
+    <material>Gazebo/Black</material>
+  </gazebo>
+  
+  <gazebo reference="Rear_L">
+    <material>Gazebo/Black</material>
+  </gazebo>
+     
+  <gazebo reference="IMPLEMENT">
+    <material>Gazebo/Gray</material>
+  </gazebo>
+
+  <link name="ultrasonic_link">
+    <visual>
+      <geometry>
+        <cylinder length="0.02" radius="0.01"/>
+      </geometry>
+      <material name="Gray"/>
+    </visual>
+
+    <collision>
+      <geometry>
+        <cylinder length="0.02" radius="0.01"/>
+      </geometry>
+    </collision>
+
+    <inertial>
+      <mass value="0.01"/>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <inertia ixx="0.000001" ixy="0" iyy="0.000001" izz="0.000001" iyz="0" ixz="0"/>
+    </inertial>
+  </link>
+
+  <joint name="ultrasonic_joint" type="fixed">
+    <parent link="base_link"/>
+    <child link="ultrasonic_link"/>
+    <origin xyz="1.8 0 0.1" rpy="0 0 0"/>
+  </joint>
+
+
+<!-- Front Left Ultrasonic Sensor -->
+
+  <gazebo reference="ultrasonic_link">
+    <sensor type="ray" name="ultrasonic_fl">
+      <always_on>true</always_on>
+      <update_rate>20</update_rate>
+      <pose>0 -0.26 0.1 0 0 0</pose>
+      <visualize>true</visualize>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>71</samples>
+            <resolution>1</resolution>
+            <min_angle>-1.22173</min_angle>
+            <max_angle>1.22173</max_angle>
+          </horizontal>
+          <vertical>
+            <samples>36</samples>
+            <resolution>1</resolution>
+            <min_angle>-0.2</min_angle>
+            <max_angle>0.611</max_angle>
+          </vertical>
+        </scan>
+        <range>
+          <min>0.2</min>
+          <max>2.5</max>
+          <resolution>0.02</resolution>
+        </range>
+      </ray>
+
+      <plugin name="ultrasonic_fl" filename="libhector_gazebo_ros_sonar.so">
+        <gaussianNoise>0.005</gaussianNoise>
+        <topicName>ultrasonic_fl</topicName>
+        <frameId>ultrasonic_link</frameId>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+
+<!-- Front Right Ultrasonic Sensor -->
+
+  <gazebo reference="ultrasonic_link">
+    <sensor type="ray" name="ultrasonic_fr">
+      <always_on>true</always_on>
+      <update_rate>20</update_rate>
+      <pose>0 0.26 0.1 0 0 0</pose>
+      <visualize>true</visualize>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>71</samples>
+            <resolution>1</resolution>
+            <min_angle>-1.22173</min_angle>
+            <max_angle>1.22173</max_angle>
+          </horizontal>
+          <vertical>
+            <samples>36</samples>
+            <resolution>1</resolution>
+            <min_angle>-0.2</min_angle>
+            <max_angle>0.611</max_angle>
+          </vertical>
+        </scan>
+        <range>
+          <min>0.2</min>
+          <max>2.5</max>
+          <resolution>0.02</resolution>
+        </range>
+      </ray>
+
+      <plugin name="ultrasonic_fr" filename="libhector_gazebo_ros_sonar.so">
+        <gaussianNoise>0.005</gaussianNoise>
+        <topicName>ultrasonic_fr</topicName>
+        <frameId>ultrasonic_link</frameId>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+
+<!-- Middle Left Ultrasonic Sensor -->
+
+  <gazebo reference="ultrasonic_link">
+    <sensor type="ray" name="ultrasonic_ml">
+      <always_on>true</always_on>
+      <update_rate>20</update_rate>
+      <pose>-0.45 -0.29 0.27 0 0 -1.5708</pose>
+      <visualize>true</visualize>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>71</samples>
+            <resolution>1</resolution>
+            <min_angle>-1.22173</min_angle>
+            <max_angle>1.22173</max_angle>
+          </horizontal>
+          <vertical>
+            <samples>36</samples>
+            <resolution>1</resolution>
+            <min_angle>-0.1</min_angle>
+            <max_angle>0.611</max_angle>
+          </vertical>
+        </scan>
+        <range>
+          <min>0.2</min>
+          <max>2.5</max>
+          <resolution>0.02</resolution>
+        </range>
+      </ray>
+
+      <plugin name="ultrasonic_ml" filename="libhector_gazebo_ros_sonar.so">
+        <gaussianNoise>0.005</gaussianNoise>
+        <topicName>ultrasonic_ml</topicName>
+        <frameId>ultrasonic_link</frameId>
+      </plugin>
+    </sensor>
+  </gazebo>
+
+
+<!-- Middle Right Ultrasonic Sensor -->
+
+  <gazebo reference="ultrasonic_link">
+    <sensor type="ray" name="ultrasonic_mr">
+      <always_on>true</always_on>
+      <update_rate>20</update_rate>
+      <pose>-0.45 0.29 0.27 0 0 1.5708</pose>
+      <visualize>true</visualize>
+      <ray>
+        <scan>
+          <horizontal>
+            <samples>71</samples>
+            <resolution>1</resolution>
+            <min_angle>-1.22173</min_angle>
+            <max_angle>1.22173</max_angle>
+          </horizontal>
+          <vertical>
+            <samples>36</samples>
+            <resolution>1</resolution>
+            <min_angle>-0.1</min_angle>
+            <max_angle>0.611</max_angle>
+          </vertical>
+        </scan>
+        <range>
+          <min>0.2</min>
+          <max>2.5</max>
+          <resolution>0.02</resolution>
+        </range>
+      </ray>
+
+      <plugin name="ultrasonic_mr" filename="libhector_gazebo_ros_sonar.so">
+        <gaussianNoise>0.005</gaussianNoise>
+        <topicName>ultrasonic_mr</topicName>
+        <frameId>ultrasonic_link</frameId>
+      </plugin>
+    </sensor>
+  </gazebo>
+  
+</robot>
